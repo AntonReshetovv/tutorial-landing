@@ -1,0 +1,80 @@
+// === Mixins ===
+@mixin roboto() {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin quicksand() {
+  font-family: "Quicksand", sans-serif;
+}
+// === / Mixins ===
+
+// === Variables ===
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+// === / Variables ===
+
+body {
+  @include roboto();
+}
+
+// === Header ===
+.section-header {
+}
+// === / Header ===
+
+// === Hero-image ===
+.section-hero-image {
+}
+// === / Hero-image ===
+
+// === Customers ===
+.section-customers {
+}
+// === / Customers ===
+
+// === Plan-and-manage ===
+.section-plan-and-manage {
+}
+// === / Plan-and-manage ===
+
+// === Features ===
+.section-features {
+}
+// === / Features ===
+
+// === Stats ===
+.section-stats {
+}
+// === / Stats ===
+
+// === Blog ===
+.section-blog {
+}
+// === / Blog ===
+
+// === Quotes ===
+.section-quotes {
+}
+// === / Quotes ===
+
+// === Faq ===
+.section-faq {
+}
+// === / Faq ===
+
+// === Get-started ===
+.section-get-started {
+}
+// === / Get-started ===
+
+// === Newsletter ===
+.section-newsletter {
+}
+// === / Newsletter ===
+
+// === Footer ===
+.section-footer {
+}
+// === / Footer ===

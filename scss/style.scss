@@ -9,33 +9,66 @@
 // === / Mixins ===
 
 // === Variables ===
+$padding-vertical-xs: 20px;
+$padding-vertical-sm: 60px;
+$padding-vertical: 120px;
 
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
+
+$color-divider: #d8e3fe;
 // === / Variables ===
 
+// === Common ===
 body {
   @include roboto();
 }
 
+.section-outer {
+  border-bottom: 1px solid $color-divider;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: $padding-vertical;
+  padding-bottom: $padding-vertical;
+
+  &--wide {
+    max-width: 1200px;
+  }
+}
+
+// === / Common ===
+
 // === Header ===
 .section-header {
+  .section-inner {
+    padding-top: $padding-vertical-xs;
+    padding-bottom: $padding-vertical-xs;
+  }
 }
 // === / Header ===
 
 // === Hero-image ===
 .section-hero-image {
+  background: linear-gradient(#f4f7ff, #f1f5ff);
 }
 // === / Hero-image ===
 
 // === Customers ===
 .section-customers {
+  .section-inner {
+    padding-top: $padding-vertical-sm;
+    padding-bottom: $padding-vertical-sm;
+  }
 }
 // === / Customers ===
 
 // === Plan-and-manage ===
 .section-plan-and-manage {
+  background: #f5f8ff;
 }
 // === / Plan-and-manage ===
 
@@ -51,11 +84,13 @@ body {
 
 // === Blog ===
 .section-blog {
+  background: #f5f8ff;
 }
 // === / Blog ===
 
 // === Quotes ===
 .section-quotes {
+  background: linear-gradient(#eaf0ff, #f6f9ff);
 }
 // === / Quotes ===
 
@@ -66,11 +101,13 @@ body {
 
 // === Get-started ===
 .section-get-started {
+  background: linear-gradient(#6888ff, #5e80ff);
 }
 // === / Get-started ===
 
 // === Newsletter ===
 .section-newsletter {
+  background: #fcfdff;
 }
 // === / Newsletter ===
 

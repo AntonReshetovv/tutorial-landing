@@ -1,3 +1,51 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
+.section-outer {
+  border-bottom: 1px solid #d8e3fe;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section-inner--wide {
+  max-width: 1200px;
+}
+
+.section-header .section-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section-hero-image {
+  background: linear-gradient(#f4f7ff, #f1f5ff);
+}
+
+.section-customers .section-inner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-plan-and-manage {
+  background: #f5f8ff;
+}
+
+.section-blog {
+  background: #f5f8ff;
+}
+
+.section-quotes {
+  background: linear-gradient(#eaf0ff, #f6f9ff);
+}
+
+.section-get-started {
+  background: linear-gradient(#6888ff, #5e80ff);
+}
+
+.section-newsletter {
+  background: #fcfdff;
+}

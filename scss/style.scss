@@ -24,6 +24,8 @@ $padding-vertical: $base * 30;
 
 $fs-sm: 12px;
 $fs-md: 15px;
+$fs-lg: 18px;
+$fs-xl: 48px;
 
 $fw-light: 300;
 $fw-regular: 400;
@@ -492,7 +494,7 @@ h5 {
     height: 1px;
     background-color: #dae4fe;
   }
-  
+
   &::after {
     display: block;
     margin-left: $base * 4;
@@ -506,6 +508,66 @@ h5 {
 
 // === Stats ===
 .section-stats {
+  display: flex;
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    padding: $base * 16 $base * 22;
+    flex-basis: 50%;
+  }
+
+  &__left {
+    align-items: flex-end;
+    color: #fff;
+    background: linear-gradient(#6888ff, #5e80ff);
+
+    &-icon {
+      margin-bottom: $base * 6;
+    }
+
+    &-number {
+      @include quicksand();
+      margin-bottom: $base * 7;
+      font-size: $fs-xl;
+      color: #fff;
+    }
+
+    &-text {
+      @include quicksand();
+      text-align: right;
+      width: 50%;
+      font-size: $fs-lg;
+      font-weight: $fw-medium;
+      line-height: 2;
+    }
+  }
+
+  &__right {
+    align-items: flex-start;
+    color: #5e80ff;
+    background: linear-gradient(#e9efff, #e0e9ff);
+
+    &-icon {
+      margin-bottom: $base * 6;
+    }
+
+    &-number {
+      @include quicksand();
+      margin-bottom: $base * 7;
+      font-size: $fs-xl;
+      color: #5e80ff;
+    }
+
+    &-text {
+      @include quicksand();
+      width: 50%;
+      font-size: $fs-lg;
+      font-weight: $fw-medium;
+      line-height: 2;
+    }
+  }
 }
 // === / Stats ===
 

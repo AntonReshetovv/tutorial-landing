@@ -132,6 +132,15 @@ h5 {
       border: 1px solid darken(#d1d1e4, 10%);
     }
   }
+
+  &--danger {
+    color: #d43f3f;
+    background-color: #ffd7d7;
+
+    &:hover {
+      background-color: darken(#ffd7d7, 5%);
+    }
+  }
 }
 
 .section-outer {
@@ -400,6 +409,98 @@ h5 {
 
 // === Features ===
 .section-features {
+  background: url("../img/features-clouds.svg") no-repeat 50% 50%;
+
+  .btns {
+    display: flex;
+    justify-content: center;
+  }
+
+  h5 {
+    margin-bottom: $base * 5;
+  }
+
+  h4 {
+    margin-bottom: $base * 23;
+    font-weight: $fw-medium;
+  }
+}
+
+.feature-list {
+  display: flex;
+  text-align: center;
+  @include list-none();
+  margin-bottom: $base * 25;
+
+  &__item {
+    position: relative;
+    flex-basis: 25%;
+
+    &:not(:first-child) {
+      margin-left: $base * 10;
+    }
+
+    &:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      top: 120px;
+      left: -34px;
+      width: $base * 7;
+      height: 1px;
+      background-color: #dae4fe;
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $base * 17;
+      height: $base * 17;
+      margin: 0 auto $base * 8;
+      border-radius: 100%;
+      background-color: #f1f5ff;
+    }
+
+    &-title {
+      margin-bottom: $base * 6;
+      font-weight: $fw-medium;
+      font-size: $fs-md;
+      color: #4074f8;
+    }
+
+    &-text {
+      font-size: $fs-sm;
+      font-weight: $fw-medium;
+      line-height: 2;
+    }
+  }
+}
+
+.or-block {
+  display: inline-flex;
+  align-items: center;
+  margin-left: $base * 4;
+  margin-right: $base * 4;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: #adb3cb;
+
+  &::before {
+    display: block;
+    margin-right: $base * 4;
+    content: "";
+    width: $base * 4;
+    height: 1px;
+    background-color: #dae4fe;
+  }
+  
+  &::after {
+    display: block;
+    margin-left: $base * 4;
+    content: "";
+    width: $base * 4;
+    height: 1px;
+    background-color: #dae4fe;
+  }
 }
 // === / Features ===
 

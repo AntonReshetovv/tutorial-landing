@@ -240,6 +240,23 @@ h5 {
   padding-bottom: 60px;
 }
 
+.customers-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.customers-list__item {
+  transition: 0.2s;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.customers-list__item:hover {
+  opacity: 1;
+}
+
 .section-plan-and-manage {
   background: #f5f8ff;
 }

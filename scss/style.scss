@@ -310,6 +310,23 @@ h5 {
     padding-bottom: $padding-vertical-sm;
   }
 }
+
+.customers-list{
+  @include list-none();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    transition: $transition;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
 // === / Customers ===
 
 // === Plan-and-manage ===

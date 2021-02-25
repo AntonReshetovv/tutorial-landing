@@ -77,18 +77,33 @@ h5 {
   text-align: center;
 }
 
+.btn-group {
+  display: inline-flex;
+
+  .btn:nth-child(1) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
 .btn {
   margin: 0;
   padding: $base * 3 $base * 4;
   @include quicksand();
   font-weight: $fw-bold;
   font-size: $fs-sm;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 2px;
   text-decoration: none;
   transition: $transition;
   cursor: pointer;
-  background-color: none;
+  box-sizing: border-box;
+  background: none;
 
   &--primary {
     color: #3a79ff;
@@ -96,6 +111,25 @@ h5 {
 
     &:hover {
       background-color: darken(#d2e1ff, 5%);
+    }
+  }
+
+  &--secondary {
+    color: #fff;
+    background-color: #4c85ff;
+
+    &:hover {
+      background-color: darken(#4c85ff, 10%);
+    }
+  }
+
+  &--no-bg {
+    color: #adb4d2;
+    border: 1px solid #d1d1e4;
+
+    &:hover {
+      color: darken(#adb4d2, 10%);
+      border: 1px solid darken(#d1d1e4, 10%);
     }
   }
 }
@@ -236,7 +270,7 @@ h5 {
 // === Hero-image ===
 .section-hero-image {
   background: linear-gradient(#f4f7ff, #f1f5ff);
-  position:relative;
+  position: relative;
 
   .dots {
     position: absolute;
@@ -271,7 +305,7 @@ h5 {
       }
 
       .text {
-        max-width: 55%;
+        max-width: 60%;
         margin: 0 auto $base * 5;
         line-height: 2;
       }
@@ -289,16 +323,9 @@ h5 {
   box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
   background-color: #fff;
 
-  &::before {
-    content: "";
-    display: block;
-    margin-left: $base * 4;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: $base * 2 $base * 3;
-    border-color: transparent;
-    border-left-color: #5e81ff;
+  svg {
+    width: $base * 3;
+    height: $base * 3;
   }
 }
 // === / Hero-image ===
@@ -311,7 +338,7 @@ h5 {
   }
 }
 
-.customers-list{
+.customers-list {
   @include list-none();
   display: flex;
   align-items: center;
@@ -331,7 +358,43 @@ h5 {
 
 // === Plan-and-manage ===
 .section-plan-and-manage {
+  position: relative;
   background: #f5f8ff;
+  overflow: hidden;
+
+  &__content {
+    width: 50%;
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+
+    h5 {
+      margin-bottom: $base * 7;
+    }
+
+    h3 {
+      margin-bottom: $base * 7;
+      font-weight: $fw-medium;
+
+      span {
+        font-weight: $fw-regular;
+      }
+    }
+
+    .text {
+      margin-bottom: $base * 12;
+      line-height: 2;
+    }
+
+    .btn-group {
+      svg {
+        margin-left: $base;
+      }
+    }
+  }
 }
 // === / Plan-and-manage ===
 

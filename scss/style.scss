@@ -162,6 +162,7 @@ h5 {
 
 .dots {
   display: flex;
+  justify-content: center;
   @include list-none();
 
   &__item {
@@ -574,6 +575,149 @@ h5 {
 // === Blog ===
 .section-blog {
   background: #f5f8ff;
+
+  h5 {
+    margin-bottom: $base * 5;
+  }
+
+  h4 {
+    margin-bottom: $base * 23;
+    font-weight: $fw-medium;
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  margin-bottom: $base * 25;
+}
+
+.slider-blog {
+  @include list-none();
+  border: 1px solid #d8e3fe;
+  box-shadow: 0px 15px 50px #eff4ff;
+  background-color: #fff;
+
+  &__item {
+    display: flex;
+    padding: $base * 16 $base * 8;
+
+    &-gallery,
+    &-content {
+      flex-basis: 45%;
+    }
+
+    &-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: $base * 3;
+      grid-row-gap: $base * 3;
+
+      .image-link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 15px 100px #e5ebf8;
+        background-color: #fff;
+        border-radius: 5px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .loupe {
+          display: block;
+          opacity: 0;
+          width: $base * 16;
+          height: $base * 16;
+          border-radius: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: $transition;
+          background: #fff url('../img/loupe.svg') no-repeat 50% 50%;
+        }
+
+        &:hover {
+          .loupe {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+
+        &--big {
+          grid-area: 1 / 1 / 3 / 2;
+
+          &::before {
+            background: linear-gradient(transparent, #ffc735);
+          }
+        }
+
+        &--sm-1 {
+          grid-area: 1 / 2 / 2 / 3;
+
+          &::before {
+            background: linear-gradient(transparent, rgba(255, 53, 53, 0.48));
+          }
+        }
+
+        &--sm-2 {
+          grid-area: 2 / 2 / 3 / 3;
+
+          &::before {
+            background: linear-gradient(transparent, rgba(53, 170, 255, 0.68));
+          }
+        }
+      }
+    }
+
+    &-content {
+      margin-left: 10%;
+
+      h3 {
+        margin-bottom: $base * 8;
+      }
+
+      .text {
+        margin-bottom: $base * 10;
+        font-size: $fs-md;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: $base * 10;
+  height: $base * 10;
+  cursor: pointer;
+  background: url('../img/arrow-slider.svg') no-repeat 50% 50%;
+  
+  &--prev {
+    margin-right: $base * 18;
+    right: 100%;
+    transform: translateY(-50%);
+  }
+
+  &--next {
+    margin-left: $base * 18;
+    left: 100%;
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
 // === / Blog ===
 

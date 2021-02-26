@@ -638,7 +638,7 @@ h5 {
           left: 50%;
           transform: translate(-50%, -50%);
           transition: $transition;
-          background: #fff url('../img/loupe.svg') no-repeat 50% 50%;
+          background: #fff url("../img/loupe.svg") no-repeat 50% 50%;
         }
 
         &:hover {
@@ -705,8 +705,8 @@ h5 {
   width: $base * 10;
   height: $base * 10;
   cursor: pointer;
-  background: url('../img/arrow-slider.svg') no-repeat 50% 50%;
-  
+  background: url("../img/arrow-slider.svg") no-repeat 50% 50%;
+
   &--prev {
     margin-right: $base * 18;
     right: 100%;
@@ -724,6 +724,69 @@ h5 {
 // === Quotes ===
 .section-quotes {
   background: linear-gradient(#eaf0ff, #f6f9ff);
+
+  .section-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left,
+  &__right {
+    flex-basis: 45%;
+  }
+
+  &__left {
+    h5 {
+      margin-bottom: $base * 8;
+      font-weight: $fw-medium;
+    }
+
+    h3 {
+      margin-bottom: $base * 4;
+      font-weight: $fw-medium;
+      @include quicksand();
+    }
+
+    .text {
+      font-size: $fs-sm;
+      font-weight: $fw-medium;
+      line-height: 2;
+    }
+  }
+}
+
+.slider-quotes {
+  @include list-none();
+  margin-bottom: $base * 20;
+
+  &__item {
+    padding: $base * 12 $base * 18;
+    border: 1px solid #d8e3fe;
+    position: relative;
+    box-shadow: 0px 5px 50px #f3f5fa;
+    background-color: #fff;
+
+    &-text {
+      font-size: $fs-md;
+      line-height: 2;
+      color: #676f95;
+    }
+
+    &-photo {
+      $height: $base * 16;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: $base * 16;
+      height: $height;
+      margin-top: -$height / 2;
+      border-radius: 100%;
+      overflow: hidden;
+      background-color: grey;
+    }
+  }
 }
 // === / Quotes ===
 

@@ -117,6 +117,15 @@ h5 {
     &:hover {
       background-color: darken(#d2e1ff, 5%);
     }
+
+    &-inverted {
+      color: #565f82;
+      background-color: #fff;
+
+      &:hover {
+        background-color: darken(#fff, 5%);
+      }
+    }
   }
 
   &--secondary {
@@ -135,6 +144,15 @@ h5 {
     &:hover {
       color: darken(#adb4d2, 10%);
       border: 1px solid darken(#d1d1e4, 10%);
+    }
+
+    &-inverted {
+      color: #c7d3ff;
+
+      &:hover {
+        color: lighten(#c7d3ff, 10%);
+        border-color: darken(#a0b4ff,5%);
+      }
     }
   }
 
@@ -873,7 +891,50 @@ h5 {
 
 // === Get-started ===
 .section-get-started {
+  position: relative;
+  text-align: center;
+  color: #fff;
   background: linear-gradient(#6888ff, #5e80ff);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background: url("../img/clouds-get-started.svg") no-repeat 50% 50%;
+  }
+
+  .section-inner {
+    position: relative;
+    z-index: 10;
+  }
+
+  h2,
+  h5 {
+    color: #fff;
+  }
+
+  h5 {
+    margin-bottom: $base * 4;
+  }
+
+  h2 {
+    margin-bottom: $base * 7;
+    font-weight: $fw-light;
+    span {
+      font-weight: $fw-medium;
+    }
+  }
+
+  .text {
+    margin: 0 auto $base * 10;
+    max-width: 60%;
+    font-size: $fs-md;
+    line-height: 2;
+  }
 }
 // === / Get-started ===
 

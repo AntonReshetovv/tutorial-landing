@@ -94,6 +94,21 @@ h5 {
   }
 }
 
+.input {
+  @include quicksand();
+  border: 1px solid transparent;
+  border-radius: $base / 2;
+  font-size: $fs-sm;
+  font-weight: $fw-bold;
+  color: #7a85ad;
+  background-color: #efeff7;
+
+  &--size-lg {
+    padding: $base * 5 $base * 6;
+    border-radius: 5px;
+  }
+}
+
 .btn {
   display: inline-block;
   margin: 0;
@@ -109,6 +124,11 @@ h5 {
   white-space: nowrap;
   box-sizing: border-box;
   background: none;
+
+  &--size-lg {
+    padding: $base * 5 $base * 15;
+    border-radius: 5px;
+  }
 
   &--primary {
     color: #3a79ff;
@@ -151,7 +171,7 @@ h5 {
 
       &:hover {
         color: lighten(#c7d3ff, 10%);
-        border-color: darken(#a0b4ff,5%);
+        border-color: darken(#a0b4ff, 5%);
       }
     }
   }
@@ -941,6 +961,43 @@ h5 {
 // === Newsletter ===
 .section-newsletter {
   background: #fcfdff;
+
+  .section-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    flex-basis: 35%;
+
+    &-title {
+      margin-bottom: $base * 5;
+      @include quicksand();
+      font-weight: $fw-bold;
+      font-size: $fs-lg;
+      color: #3d4f9f;
+    }
+
+    &-text {
+      font-size: $fs-md;
+      line-height: 2;
+    }
+  }
+
+  &__right {
+    flex-basis: 55%;
+  }
+}
+
+.form-newsletter {
+  display: flex;
+  &__input {
+    flex-grow: 1;
+  }
+
+  &__btn {
+    margin-left: $base * 3;
+  }
 }
 // === / Newsletter ===
 

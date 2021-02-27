@@ -52,6 +52,20 @@ h5 {
   border-bottom-left-radius: 0;
 }
 
+.input {
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a85ad;
+  background-color: #efeff7;
+}
+.input--size-lg {
+  padding: 20px 24px;
+  border-radius: 5px;
+}
+
 .btn {
   display: inline-block;
   margin: 0;
@@ -67,6 +81,10 @@ h5 {
   white-space: nowrap;
   box-sizing: border-box;
   background: none;
+}
+.btn--size-lg {
+  padding: 20px 60px;
+  border-radius: 5px;
 }
 .btn--primary {
   color: #3a79ff;
@@ -758,6 +776,37 @@ h5 {
 
 .section-newsletter {
   background: #fcfdff;
+}
+.section-newsletter .section-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.section-newsletter__left {
+  flex-basis: 35%;
+}
+.section-newsletter__left-title {
+  margin-bottom: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #3d4f9f;
+}
+.section-newsletter__left-text {
+  font-size: 15px;
+  line-height: 2;
+}
+.section-newsletter__right {
+  flex-basis: 55%;
+}
+
+.form-newsletter {
+  display: flex;
+}
+.form-newsletter__input {
+  flex-grow: 1;
+}
+.form-newsletter__btn {
+  margin-left: 12px;
 }
 
 .section-footer {

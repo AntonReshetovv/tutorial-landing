@@ -63,7 +63,7 @@ h5 {
 }
 .input--size-lg {
   padding: 20px 24px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .btn {
@@ -84,7 +84,7 @@ h5 {
 }
 .btn--size-lg {
   padding: 20px 60px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .btn--primary {
   color: #3a79ff;
@@ -298,7 +298,7 @@ h5 {
   width: 52px;
   height: 52px;
   border-radius: 100%;
-  box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+  box-shadow: 0px 8px 48px rgba(201, 209, 231, 0.6);
   background-color: #fff;
 }
 .icon-play svg {
@@ -541,9 +541,9 @@ h5 {
   display: block;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 15px 100px #e5ebf8;
+  box-shadow: 0px 16px 100px #e5ebf8;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .slider-blog__item-gallery .image-link img {
   width: 100%;

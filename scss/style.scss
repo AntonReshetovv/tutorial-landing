@@ -105,7 +105,7 @@ h5 {
 
   &--size-lg {
     padding: $base * 5 $base * 6;
-    border-radius: 5px;
+    border-radius: $base;
   }
 }
 
@@ -117,7 +117,7 @@ h5 {
   font-weight: $fw-bold;
   font-size: $fs-sm;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: $base / 2;
   text-decoration: none;
   transition: $transition;
   cursor: pointer;
@@ -127,7 +127,7 @@ h5 {
 
   &--size-lg {
     padding: $base * 5 $base * 15;
-    border-radius: 5px;
+    border-radius: $base;
   }
 
   &--primary {
@@ -382,7 +382,7 @@ h5 {
   width: $base * 13;
   height: $base * 13;
   border-radius: 100%;
-  box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+  box-shadow: 0px $base * 2 $base * 12 rgba(201, 209, 231, 0.6);
   background-color: #fff;
 
   svg {
@@ -486,19 +486,22 @@ h5 {
   margin-bottom: $base * 25;
 
   &__item {
+    $margin-left:$base * 10;
+    $divider-width:$base * 7;
+
     position: relative;
     flex-basis: 25%;
 
     &:not(:first-child) {
-      margin-left: $base * 10;
+      margin-left: $margin-left;
     }
 
     &:not(:first-child)::before {
       content: "";
       position: absolute;
-      top: 120px;
-      left: -34px;
-      width: $base * 7;
+      top: $base * 30;
+      left: -$divider-width - ($margin-left - $divider-width) / 2;
+      width: $divider-width;
       height: 1px;
       background-color: #dae4fe;
     }
@@ -667,9 +670,9 @@ h5 {
         display: block;
         position: relative;
         overflow: hidden;
-        box-shadow: 0px 15px 100px #e5ebf8;
+        box-shadow: 0px $base * 4 $base * 25 #e5ebf8;
         background-color: #fff;
-        border-radius: 5px;
+        border-radius: $base;
 
         img {
           width: 100%;

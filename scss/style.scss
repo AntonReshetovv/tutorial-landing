@@ -34,13 +34,48 @@ $fw-bold: 700;
 
 $color-divider: #d8e3fe;
 
+// white
+$color-white-400:#f3f5fa;
+$color-white-500:#e9efff;
+$color-white-900: #fff;
+
+// gray
+$color-gray-100: #c9d1e7;
+$color-gray-200: #b6bac7;
+$color-gray-300: #adb4d2;
+$color-gray-400: #7a85ad;
+$color-gray-500: #8d96bd;
+$color-gray-600: #676f95;
+$color-gray-700: #565f82;
+$color-gray-800: #495274;
+
+//blue
+$color-blue-50: #efeff7;
+$color-blue-100:#e8ecf4;
+$color-blue-200:#dae4fe;
+$color-blue-300:#c7d3ff;
+$color-blue-400:#a0b4ff;
+$color-blue-500: #6188ff;
+$color-blue-600:#3a79ff;
+$color-blue-700:#3d4f9f;
+
+// red
+$color-red:#d43f3f;
+
+//pink
+$color-pink:#ffd7d7;
+
+//yellow
+$color-yellow:#ffc735;
+
+
 $transition: 0.2s;
 // === / Variables ===
 
 // === Common ===
 body {
   @include roboto();
-  color: #8d96bd;
+  color: $color-gray-500;
 }
 
 h1,
@@ -53,7 +88,7 @@ h6 {
   margin: 0;
   padding: 0;
   font-weight: $fw-regular;
-  color: #3d4f9f;
+  color: $color-blue-700;
 }
 
 h1,
@@ -100,8 +135,8 @@ h5 {
   border-radius: $base / 2;
   font-size: $fs-sm;
   font-weight: $fw-bold;
-  color: #7a85ad;
-  background-color: #efeff7;
+  color: $color-gray-400;
+  background-color: $color-blue-50;
 
   &--size-lg {
     padding: $base * 5 $base * 6;
@@ -131,66 +166,66 @@ h5 {
   }
 
   &--primary {
-    color: #3a79ff;
-    background-color: #d2e1ff;
+    color: $color-blue-600;
+    background-color: $color-blue-200;
 
     &:hover {
-      background-color: darken(#d2e1ff, 5%);
+      background-color: darken($color-blue-200, 5%);
     }
 
     &-inverted {
-      color: #565f82;
-      background-color: #fff;
+      color: $color-gray-700;
+      background-color: $color-white-900;
 
       &:hover {
-        background-color: darken(#fff, 5%);
+        background-color: darken($color-white-900, 5%);
       }
     }
   }
 
   &--secondary {
-    color: #fff;
-    background-color: #4c85ff;
+    color: $color-white-900;
+    background-color: $color-blue-500;
 
     &:hover {
-      background-color: darken(#4c85ff, 10%);
+      background-color: darken($color-blue-500, 10%);
     }
   }
 
   &--no-bg {
-    color: #adb4d2;
-    border: 1px solid #d1d1e4;
+    color: $color-gray-100;
+    border: 1px solid $color-gray-100;
 
     &:hover {
-      color: darken(#adb4d2, 10%);
-      border: 1px solid darken(#d1d1e4, 10%);
+      color: darken($color-gray-100, 10%);
+      border: 1px solid darken($color-gray-100, 10%);
     }
 
     &-inverted {
-      color: #c7d3ff;
+      color: $color-blue-300;
 
       &:hover {
-        color: lighten(#c7d3ff, 10%);
-        border-color: darken(#a0b4ff, 5%);
+        color: lighten($color-blue-300, 10%);
+        border-color: darken($color-blue-500, 5%);
       }
     }
   }
 
   &--danger {
-    color: #d43f3f;
-    background-color: #ffd7d7;
+    color: $color-red;
+    background-color: $color-pink;
 
     &:hover {
-      background-color: darken(#ffd7d7, 5%);
+      background-color: darken($color-pink, 5%);
     }
   }
 
   &--grayscale {
-    color: #7382a3;
-    background: #e8ecf4;
+    color: $color-gray-600;
+    background: $color-blue-100;
 
     &:hover {
-      background-color: darken(#e8ecf4, 5%);
+      background-color: darken($color-blue-100, 5%);
     }
   }
 }
@@ -221,18 +256,18 @@ h5 {
     border-radius: 100%;
     transition: $transition;
     cursor: pointer;
-    background-color: #d1d6e3;
+    background-color: $color-gray-200;
 
     & + & {
       margin-left: $base * 3;
     }
 
     &:hover {
-      background-color: #5283ff;
+      background-color: $color-blue-500;
     }
 
     &--active {
-      background-color: #5283ff;
+      background-color: $color-blue-500;
     }
   }
 }
@@ -258,7 +293,7 @@ h5 {
   height: $base * 6;
   border-radius: 100%;
   text-decoration: none;
-  background-color: #5e81fe;
+  background-color: $color-blue-500;
 }
 
 .nav {
@@ -280,16 +315,16 @@ h5 {
       font-weight: $fw-medium;
       transition: $transition;
       text-decoration: none;
-      color: #697ca6;
+      color: $color-gray-600;
 
       &--active {
         font-weight: $fw-bold;
-        color: #5e81fe;
+        color: $color-blue-500;
       }
 
       &:hover {
         font-weight: $fw-bold;
-        color: #5e81fe;
+        color: $color-blue-500;
       }
     }
   }
@@ -312,12 +347,12 @@ h5 {
     &-link {
       path {
         transition: $transition;
-        fill: #b6bac7;
+        fill: $color-gray-200;
       }
 
       &:hover {
         path {
-          fill: #6188ff;
+          fill: $color-blue-500;
         }
       }
     }
@@ -382,8 +417,8 @@ h5 {
   width: $base * 13;
   height: $base * 13;
   border-radius: 100%;
-  box-shadow: 0px $base * 2 $base * 12 rgba(201, 209, 231, 0.6);
-  background-color: #fff;
+  box-shadow: 0px $base * 2 $base * 12 $color-gray-100 0.6;
+  background-color: $color-white-900;
 
   svg {
     width: $base * 3;
@@ -421,7 +456,7 @@ h5 {
 // === Plan-and-manage ===
 .section-plan-and-manage {
   position: relative;
-  background: #f5f8ff;
+  background: $color-white-500;
   overflow: hidden;
 
   &__content {
@@ -503,7 +538,7 @@ h5 {
       left: -$divider-width - ($margin-left - $divider-width) / 2;
       width: $divider-width;
       height: 1px;
-      background-color: #dae4fe;
+      background-color: $color-blue-200;
     }
     &-icon {
       display: flex;
@@ -513,14 +548,14 @@ h5 {
       height: $base * 17;
       margin: 0 auto $base * 8;
       border-radius: 100%;
-      background-color: #f1f5ff;
+      background-color: $color-white-500;
     }
 
     &-title {
       margin-bottom: $base * 6;
       font-weight: $fw-medium;
       font-size: $fs-md;
-      color: #4074f8;
+      color: $color-blue-600;
     }
 
     &-text {
@@ -538,7 +573,7 @@ h5 {
   margin-right: $base * 4;
   font-size: $fs-sm;
   font-weight: $fw-medium;
-  color: #adb3cb;
+  color: $color-gray-300;
 
   &::before {
     display: block;
@@ -546,7 +581,7 @@ h5 {
     content: "";
     width: $base * 4;
     height: 1px;
-    background-color: #dae4fe;
+    background-color: $color-blue-200;
   }
 
   &::after {
@@ -555,7 +590,7 @@ h5 {
     content: "";
     width: $base * 4;
     height: 1px;
-    background-color: #dae4fe;
+    background-color: $color-blue-200;
   }
 }
 // === / Features ===
@@ -574,8 +609,8 @@ h5 {
 
   &__left {
     align-items: flex-end;
-    color: #fff;
-    background: linear-gradient(#6888ff, #5e80ff);
+    color: $color-white-900;
+    background: linear-gradient(#6888ff, $color-blue-600);
 
     &-icon {
       margin-bottom: $base * 6;
@@ -585,7 +620,7 @@ h5 {
       @include quicksand();
       margin-bottom: $base * 7;
       font-size: $fs-xl;
-      color: #fff;
+      color: $color-white-900;
     }
 
     &-text {
@@ -600,7 +635,7 @@ h5 {
 
   &__right {
     align-items: flex-start;
-    color: #5e80ff;
+    color: $color-blue-600;
     background: linear-gradient(#e9efff, #e0e9ff);
 
     &-icon {
@@ -611,7 +646,7 @@ h5 {
       @include quicksand();
       margin-bottom: $base * 7;
       font-size: $fs-xl;
-      color: #5e80ff;
+      color: $color-blue-600;
     }
 
     &-text {
@@ -627,7 +662,7 @@ h5 {
 
 // === Blog ===
 .section-blog {
-  background: #f5f8ff;
+  background: $color-white-500;
 
   h5 {
     margin-bottom: $base * 5;
@@ -646,9 +681,9 @@ h5 {
 
 .slider-blog {
   @include list-none();
-  border: 1px solid #d8e3fe;
-  box-shadow: 0px 15px 50px #eff4ff;
-  background-color: #fff;
+  border: 1px solid $color-blue-300;
+  box-shadow: 0px 15px 50px $color-white-500;
+  background-color: $color-white-900;
 
   &__item {
     display: flex;
@@ -670,8 +705,8 @@ h5 {
         display: block;
         position: relative;
         overflow: hidden;
-        box-shadow: 0px $base * 4 $base * 25 #e5ebf8;
-        background-color: #fff;
+        box-shadow: 0px $base * 4 $base * 25 $color-blue-200;
+        background-color: $color-white-900;
         border-radius: $base;
 
         img {
@@ -691,7 +726,7 @@ h5 {
           left: 50%;
           transform: translate(-50%, -50%);
           transition: $transition;
-          background: #fff url("../img/loupe.svg") no-repeat 50% 50%;
+          background: $color-white-900 url("../img/loupe.svg") no-repeat 50% 50%;
         }
 
         &:hover {
@@ -814,15 +849,15 @@ h5 {
 
   &__item {
     padding: $base * 12 $base * 18;
-    border: 1px solid #d8e3fe;
+    border: 1px solid $color-divider;
     position: relative;
-    box-shadow: 0px 5px 50px #f3f5fa;
-    background-color: #fff;
+    box-shadow: 0px 5px 50px $color-white-400;
+    background-color: $color-white-900;
 
     &-text {
       font-size: $fs-md;
       line-height: 2;
-      color: #676f95;
+      color: $color-gray-600;
     }
 
     &-photo {
@@ -865,11 +900,11 @@ h5 {
 
     &--active {
       .arrow {
-        stroke: #495274;
+        stroke: $color-gray-800;
       }
 
       #{$parent}-trigger {
-        color: #495274;
+        color: $color-gray-800;
         font-weight: $fw-bold;
 
         &-icon {
@@ -916,7 +951,7 @@ h5 {
 .section-get-started {
   position: relative;
   text-align: center;
-  color: #fff;
+  color: $color-white-900;
   background: linear-gradient(#6888ff, #5e80ff);
 
   &::before {
@@ -937,7 +972,7 @@ h5 {
 
   h2,
   h5 {
-    color: #fff;
+    color: $color-white-900;
   }
 
   h5 {
@@ -978,7 +1013,7 @@ h5 {
       @include quicksand();
       font-weight: $fw-bold;
       font-size: $fs-lg;
-      color: #3d4f9f;
+      color: $color-blue-700;
     }
 
     &-text {
@@ -1020,6 +1055,6 @@ h5 {
   margin-left: $base * 24;
   font-size: $fs-sm;
   font-weight: $fw-medium;
-  color: #aeb8d0;
+  color: $color-gray-300;
 }
 // === / Footer ===

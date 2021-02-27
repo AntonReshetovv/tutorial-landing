@@ -88,10 +88,10 @@ h5 {
 }
 .btn--primary {
   color: #3a79ff;
-  background-color: #d2e1ff;
+  background-color: #dae4fe;
 }
 .btn--primary:hover {
-  background-color: #b9d0ff;
+  background-color: #c1d2fd;
 }
 .btn--primary-inverted {
   color: #565f82;
@@ -102,25 +102,25 @@ h5 {
 }
 .btn--secondary {
   color: #fff;
-  background-color: #4c85ff;
+  background-color: #6188ff;
 }
 .btn--secondary:hover {
-  background-color: #1962ff;
+  background-color: #2e62ff;
 }
 .btn--no-bg {
-  color: #adb4d2;
-  border: 1px solid #d1d1e4;
+  color: #c9d1e7;
+  border: 1px solid #c9d1e7;
 }
 .btn--no-bg:hover {
-  color: #8c96c0;
-  border: 1px solid #b1b1d1;
+  color: #a6b3d7;
+  border: 1px solid #a6b3d7;
 }
 .btn--no-bg-inverted {
   color: #c7d3ff;
 }
 .btn--no-bg-inverted:hover {
   color: #fafbff;
-  border-color: #87a0ff;
+  border-color: #4875ff;
 }
 .btn--danger {
   color: #d43f3f;
@@ -130,7 +130,7 @@ h5 {
   background-color: #ffbebe;
 }
 .btn--grayscale {
-  color: #7382a3;
+  color: #676f95;
   background: #e8ecf4;
 }
 .btn--grayscale:hover {
@@ -164,16 +164,16 @@ h5 {
   border-radius: 100%;
   transition: 0.2s;
   cursor: pointer;
-  background-color: #d1d6e3;
+  background-color: #b6bac7;
 }
 .dots__item + .dots__item {
   margin-left: 12px;
 }
 .dots__item:hover {
-  background-color: #5283ff;
+  background-color: #6188ff;
 }
 .dots__item--active {
-  background-color: #5283ff;
+  background-color: #6188ff;
 }
 
 .section-header .section-inner {
@@ -192,7 +192,7 @@ h5 {
   height: 24px;
   border-radius: 100%;
   text-decoration: none;
-  background-color: #5e81fe;
+  background-color: #6188ff;
 }
 
 .nav {
@@ -215,15 +215,15 @@ h5 {
   font-weight: 500;
   transition: 0.2s;
   text-decoration: none;
-  color: #697ca6;
+  color: #676f95;
 }
 .nav-wrapper__item-link--active {
   font-weight: 700;
-  color: #5e81fe;
+  color: #6188ff;
 }
 .nav-wrapper__item-link:hover {
   font-weight: 700;
-  color: #5e81fe;
+  color: #6188ff;
 }
 
 .socials {
@@ -298,7 +298,7 @@ h5 {
   width: 52px;
   height: 52px;
   border-radius: 100%;
-  box-shadow: 0px 8px 48px rgba(201, 209, 231, 0.6);
+  box-shadow: 0px 8px 48px #c9d1e7 0.6;
   background-color: #fff;
 }
 .icon-play svg {
@@ -330,7 +330,7 @@ h5 {
 
 .section-plan-and-manage {
   position: relative;
-  background: #f5f8ff;
+  background: #e9efff;
   overflow: hidden;
 }
 .section-plan-and-manage__content {
@@ -406,13 +406,13 @@ h5 {
   height: 68px;
   margin: 0 auto 32px;
   border-radius: 100%;
-  background-color: #f1f5ff;
+  background-color: #e9efff;
 }
 .feature-list__item-title {
   margin-bottom: 24px;
   font-weight: 500;
   font-size: 15px;
-  color: #4074f8;
+  color: #3a79ff;
 }
 .feature-list__item-text {
   font-size: 12px;
@@ -427,7 +427,7 @@ h5 {
   margin-right: 16px;
   font-size: 12px;
   font-weight: 500;
-  color: #adb3cb;
+  color: #adb4d2;
 }
 .or-block::before {
   display: block;
@@ -458,7 +458,7 @@ h5 {
 .section-stats__left {
   align-items: flex-end;
   color: #fff;
-  background: linear-gradient(#6888ff, #5e80ff);
+  background: linear-gradient(#6888ff, #3a79ff);
 }
 .section-stats__left-icon {
   margin-bottom: 24px;
@@ -479,7 +479,7 @@ h5 {
 }
 .section-stats__right {
   align-items: flex-start;
-  color: #5e80ff;
+  color: #3a79ff;
   background: linear-gradient(#e9efff, #e0e9ff);
 }
 .section-stats__right-icon {
@@ -489,7 +489,7 @@ h5 {
   font-family: "Quicksand", sans-serif;
   margin-bottom: 28px;
   font-size: 48px;
-  color: #5e80ff;
+  color: #3a79ff;
 }
 .section-stats__right-text {
   font-family: "Quicksand", sans-serif;
@@ -500,7 +500,7 @@ h5 {
 }
 
 .section-blog {
-  background: #f5f8ff;
+  background: #e9efff;
 }
 .section-blog h5 {
   margin-bottom: 20px;
@@ -519,8 +519,8 @@ h5 {
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid #d8e3fe;
-  box-shadow: 0px 15px 50px #eff4ff;
+  border: 1px solid #c7d3ff;
+  box-shadow: 0px 15px 50px #e9efff;
   background-color: #fff;
 }
 .slider-blog__item {
@@ -541,7 +541,7 @@ h5 {
   display: block;
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 16px 100px #e5ebf8;
+  box-shadow: 0px 16px 100px #dae4fe;
   background-color: #fff;
   border-radius: 4px;
 }
@@ -823,5 +823,5 @@ h5 {
   margin-left: 96px;
   font-size: 12px;
   font-weight: 500;
-  color: #aeb8d0;
+  color: #adb4d2;
 }

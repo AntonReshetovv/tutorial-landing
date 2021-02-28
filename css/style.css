@@ -145,6 +145,7 @@ h3 {
 }
 
 .section-outer {
+  padding: 0 20px;
   border-bottom: 1px solid #d8e3fe;
 }
 
@@ -260,8 +261,9 @@ h3 {
 }
 
 .section-hero-image {
-  background: linear-gradient(#f4f7ff, #f1f5ff);
+  padding: 0;
   position: relative;
+  background: linear-gradient(#f4f7ff, #f1f5ff);
 }
 .section-hero-image .dots {
   position: absolute;
@@ -448,6 +450,7 @@ h3 {
 
 .section-stats {
   display: flex;
+  padding: 0;
 }
 .section-stats__left, .section-stats__right {
   display: flex;

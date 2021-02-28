@@ -278,7 +278,7 @@ h3 {
 .slider-hero-image__item {
   height: 560px;
   text-align: center;
-  background-position: 50% 50%;
+  background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }

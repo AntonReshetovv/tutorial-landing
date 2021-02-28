@@ -669,11 +669,10 @@ h3 {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -32px);
   display: block;
   width: 64px;
   height: 64px;
-  margin-top: -32px;
   border-radius: 100%;
   overflow: hidden;
   background-color: grey;

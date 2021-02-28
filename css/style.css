@@ -523,6 +523,7 @@ h3 {
 }
 .slider-blog__item {
   display: flex;
+  justify-content: space-between;
   padding: 64px 32px;
 }
 .slider-blog__item-gallery, .slider-blog__item-content {
@@ -590,9 +591,6 @@ h3 {
 }
 .slider-blog__item-gallery .image-link--sm-2::before {
   background: linear-gradient(transparent, rgba(53, 170, 255, 0.68));
-}
-.slider-blog__item-content {
-  margin-left: 10%;
 }
 .slider-blog__item-content h3 {
   margin-bottom: 32px;

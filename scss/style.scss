@@ -685,6 +685,7 @@ h3 {
 
   &__item {
     display: flex;
+    justify-content: space-between;
     padding: $base * 16 $base * 8;
 
     &-gallery,
@@ -768,8 +769,6 @@ h3 {
     }
 
     &-content {
-      margin-left: 10%;
-
       h3 {
         margin-bottom: $base * 8;
       }

@@ -347,6 +347,7 @@ h3 {
 .section-plan-and-manage__content .section-subtitle {
   margin-bottom: 28px;
   font-weight: 500;
+  font-size: 36px;
 }
 .section-plan-and-manage__content .section-subtitle span {
   font-weight: 400;
@@ -547,8 +548,9 @@ h3 {
   height: 100%;
   object-fit: cover;
 }
-.slider-blog__item-gallery .image-link .loupe {
+.slider-blog__item-gallery .image-link::after {
   display: block;
+  content: "";
   opacity: 0;
   width: 64px;
   height: 64px;
@@ -560,7 +562,7 @@ h3 {
   transition: 0.2s;
   background: #fff url("../img/loupe.svg") no-repeat 50% 50%;
 }
-.slider-blog__item-gallery .image-link:hover .loupe {
+.slider-blog__item-gallery .image-link:hover::after {
   opacity: 1;
 }
 .slider-blog__item-gallery .image-link::before {

@@ -22,10 +22,13 @@ $padding-vertical-xs: $base * 5;
 $padding-vertical-sm: $base * 15;
 $padding-vertical: $base * 30;
 
-$fs-sm: 12px;
-$fs-md: 15px;
-$fs-lg: 18px;
-$fs-xl: 48px;
+$fs-xxs: 10px;
+$fs-xs: 12px;
+$fs-s: 15px;
+$fs-m: 18px;
+$fs-l: 24px;
+$fs-xl:36px;
+$fs-xxl: 48px;
 
 $fw-light: 300;
 $fw-regular: 400;
@@ -102,24 +105,13 @@ h2 {
   @include roboto();
   margin-bottom: $base * 4;
   font-weight: $fw-medium;
-  font-size: 10px;
+  font-size: $fs-xxs;
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 36px;
 }
-
-// h4 {
-//   font-size: 24px;
-// }
-
-// h5 {
-//   @include roboto();
-//   font-weight: $fw-medium;
-//   font-size: 10px;
-//   text-transform: uppercase;
-// }
 
 .ta-center {
   text-align: center;
@@ -128,7 +120,7 @@ h3 {
 .section-subtitle {
   @include quicksand();
   margin-bottom: $base * 7;
-  font-size: 48px;
+  font-size: $fs-xxl;
   color: $color-blue-700;
 }
 
@@ -150,7 +142,7 @@ h3 {
   @include quicksand();
   border: 1px solid transparent;
   border-radius: $base / 2;
-  font-size: $fs-sm;
+  font-size: $fs-xs;
   font-weight: $fw-bold;
   color: $color-gray-400;
   background-color: $color-blue-50;
@@ -167,7 +159,7 @@ h3 {
   padding: $base * 3 $base * 4;
   @include quicksand();
   font-weight: $fw-bold;
-  font-size: $fs-sm;
+  font-size: $fs-xs;
   border: 1px solid transparent;
   border-radius: $base / 2;
   text-decoration: none;
@@ -330,7 +322,7 @@ h3 {
 
     &-link {
       @include quicksand();
-      font-size: $fs-sm;
+      font-size: $fs-xs;
       font-weight: $fw-medium;
       transition: $transition;
       text-decoration: none;
@@ -485,6 +477,7 @@ h3 {
     .section-subtitle {
       margin-bottom: $base * 7;
       font-weight: $fw-medium;
+      font-size: $fs-xl;
 
       span {
         font-weight: $fw-regular;
@@ -516,7 +509,7 @@ h3 {
 
   .section-subtitle {
     margin-bottom: $base * 23;
-    font-size: $base * 6;
+    font-size:$fs-l;
     font-weight: $fw-medium;
   }
 }
@@ -562,12 +555,12 @@ h3 {
       margin-bottom: $base * 6;
       @include roboto();
       font-weight: $fw-medium;
-      font-size: $fs-md;
+      font-size: $fs-s;
       color: $color-blue-600;
     }
 
     &-text {
-      font-size: $fs-sm;
+      font-size: $fs-xs;
       font-weight: $fw-medium;
       line-height: 2;
     }
@@ -579,7 +572,7 @@ h3 {
   align-items: center;
   margin-left: $base * 4;
   margin-right: $base * 4;
-  font-size: $fs-sm;
+  font-size: $fs-xs;
   font-weight: $fw-medium;
   color: $color-gray-300;
 
@@ -627,7 +620,7 @@ h3 {
     &-number {
       @include quicksand();
       margin-bottom: $base * 7;
-      font-size: $fs-xl;
+      font-size: $fs-xxl;
       color: $color-white-900;
     }
 
@@ -635,7 +628,7 @@ h3 {
       @include quicksand();
       text-align: right;
       width: 50%;
-      font-size: $fs-lg;
+      font-size: $fs-m;
       font-weight: $fw-medium;
       line-height: 2;
     }
@@ -653,14 +646,14 @@ h3 {
     &-number {
       @include quicksand();
       margin-bottom: $base * 7;
-      font-size: $fs-xl;
+      font-size: $fs-xxl;
       color: $color-blue-600;
     }
 
     &-text {
       @include quicksand();
       width: 50%;
-      font-size: $fs-lg;
+      font-size: $fs-m;
       font-weight: $fw-medium;
       line-height: 2;
     }
@@ -675,7 +668,7 @@ h3 {
   .section-subtitle {
     margin-bottom: $base * 23;
     font-weight: $fw-medium;
-    font-size: $base * 6;
+    font-size:$fs-l;
   }
 }
 
@@ -720,8 +713,9 @@ h3 {
           object-fit: cover;
         }
 
-        .loupe {
+        &::after {
           display: block;
+          content:'';
           opacity: 0;
           width: $base * 16;
           height: $base * 16;
@@ -734,10 +728,8 @@ h3 {
           background: $color-white-900 url("../img/loupe.svg") no-repeat 50% 50%;
         }
 
-        &:hover {
-          .loupe {
+        &:hover::after {
             opacity: 1;
-          }
         }
 
         &::before {
@@ -784,7 +776,7 @@ h3 {
 
       .text {
         margin-bottom: $base * 10;
-        font-size: $fs-md;
+        font-size: $fs-s;
         line-height: 2;
       }
     }
@@ -837,12 +829,12 @@ h3 {
     .section-subtitle {
       margin-bottom: $base * 4;
       font-weight: $fw-medium;
-      font-size: $base * 9;
+      font-size:$fs-xl;
       @include quicksand();
     }
 
     .text {
-      font-size: $fs-sm;
+      font-size: $fs-xs;
       font-weight: $fw-medium;
       line-height: 2;
     }
@@ -861,7 +853,7 @@ h3 {
     background-color: $color-white-900;
 
     &-text {
-      font-size: $fs-md;
+      font-size: $fs-s;
       line-height: 2;
       color: $color-gray-600;
     }
@@ -890,7 +882,7 @@ h3 {
     .section-subtitle {
       margin-bottom: $base * 16;
       font-weight: $fw-medium;
-      font-size: $base * 6;
+      font-size:$fs-l;
     }
   }
 }
@@ -915,7 +907,7 @@ h3 {
 
         &-title {
           color: $color-gray-800;
-          font-size: $fs-md;
+          font-size: $fs-s;
           font-weight: $fw-bold;
         }
       }
@@ -937,7 +929,7 @@ h3 {
       }
 
       &-title {
-        font-size: $fs-md;
+        font-size: $fs-s;
       }
     }
 
@@ -947,7 +939,7 @@ h3 {
 
       &-text {
         flex-grow: 1;
-        font-size: $fs-md;
+        font-size: $fs-s;
         line-height: 2;
       }
 
@@ -988,7 +980,7 @@ h3 {
 
     .section-subtitle {
       font-weight: $fw-light;
-      font-size: $fs-xl;
+      font-size: $fs-xxl;
       span {
         font-weight: $fw-medium;
       }
@@ -997,7 +989,7 @@ h3 {
     .text {
       margin: 0 auto $base * 10;
       max-width: 60%;
-      font-size: $fs-md;
+      font-size: $fs-s;
       line-height: 2;
     }
   }
@@ -1020,13 +1012,13 @@ h3 {
       margin-bottom: $base * 5;
       @include quicksand();
       font-weight: $fw-bold;
-      font-size: $fs-lg;
+      font-size: $fs-m;
       color: $color-blue-700;
       text-transform: none;
     }
 
     &-text {
-      font-size: $fs-md;
+      font-size: $fs-s;
       line-height: 2;
     }
   }
@@ -1063,7 +1055,7 @@ h3 {
   @include quicksand();
   margin-top: $base * 7;
   margin-left: $base * 24;
-  font-size: $fs-sm;
+  font-size: $fs-xs;
   font-weight: $fw-medium;
   color: $color-gray-300;
 }

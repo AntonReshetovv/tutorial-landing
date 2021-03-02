@@ -577,6 +577,17 @@ h3 {
       opacity: 1;
     }
   }
+
+  @media (max-width: $breakpoint-xs-max) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+      margin: $base * 3 0;
+      flex-basis: 45%;
+      text-align: center;
+    }
+  }
 }
 // === / Customers ===
 

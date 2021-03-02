@@ -368,7 +368,7 @@ h3 {
 
     .section-header & {
       @media (max-width: $breakpoint-md-max) {
-        display: none;
+        // display: none;
         margin-left: 0;
         padding: 0 $base;
         position: absolute;
@@ -446,9 +446,14 @@ h3 {
   display: flex;
   align-items: center;
   @include list-none();
+
   &__item {
     & + & {
       margin-left: $base * 10;
+
+      @media (max-width: $breakpoint-xs-max) {
+        margin: 0;
+      }
     }
 
     &-link {
@@ -469,6 +474,10 @@ h3 {
         color: $color-blue-500;
       }
     }
+  }
+
+  @media (max-width: $breakpoint-xs-max) {
+    flex-direction: column;
   }
 }
 
@@ -1026,7 +1035,6 @@ h3 {
     }
 
     @media (max-width: $breakpoint-xs-max) {
-
       &-gallery {
         width: 100%;
       }

@@ -772,6 +772,8 @@ h3 {
   }
   .slider-blog__item-content {
     margin-left: 0;
+    position: relative;
+    z-index: 5;
   }
   .slider-blog__item-content h3 {
     margin-bottom: 1rem;
@@ -810,6 +812,11 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 575px) {
+  .section-quotes .section-inner {
+    flex-direction: column;
+  }
+}
 .section-quotes__left, .section-quotes__right {
   flex-basis: 45%;
 }
@@ -827,6 +834,11 @@ h3 {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 2;
+}
+@media (max-width: 575px) {
+  .section-quotes__left {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .slider-quotes {

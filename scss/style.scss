@@ -840,11 +840,10 @@ h3 {
   }
 
   @media (max-width: $breakpoint-xs-max) {
-    
-  &__left,
-  &__right {
-    padding: $base * 8 $base * 10;
-  }
+    &__left,
+    &__right {
+      padding: $base * 8 $base * 10;
+    }
   }
 }
 // === / Stats ===
@@ -974,6 +973,23 @@ h3 {
         font-size: $fs-s;
         line-height: 2;
       }
+    }
+
+    @media (max-width: $breakpoint-xs-max) {
+     flex-direction: column;
+     padding: $base * 6;
+
+     &-gallery {
+       margin-bottom: $base * 6;
+     }
+
+     &-content {
+       margin-left: 0;
+
+       h3 {
+        margin-bottom: $base * 4;
+       }
+     }
     }
   }
 }

@@ -762,6 +762,21 @@ h3 {
   font-size: 0.9375rem;
   line-height: 2;
 }
+@media (max-width: 575px) {
+  .slider-blog__item {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .slider-blog__item-gallery {
+    margin-bottom: 1.5rem;
+  }
+  .slider-blog__item-content {
+    margin-left: 0;
+  }
+  .slider-blog__item-content h3 {
+    margin-bottom: 1rem;
+  }
+}
 
 .slider-btn {
   position: absolute;

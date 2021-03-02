@@ -1170,6 +1170,18 @@ h3 {
       &-btn {
         margin-left: $base * 16;
       }
+
+      @media (max-width: $breakpoint-xs-max){
+        flex-direction: column;
+
+        &-text {
+          margin-bottom: $base * 5;
+        }
+
+        &-btn {
+          margin-left: 0;
+        }
+      }
     }
   }
 }

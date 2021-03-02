@@ -925,6 +925,17 @@ h3 {
 .faq-accordion__item-content-btn {
   margin-left: 4rem;
 }
+@media (max-width: 575px) {
+  .faq-accordion__item-content {
+    flex-direction: column;
+  }
+  .faq-accordion__item-content-text {
+    margin-bottom: 1.25rem;
+  }
+  .faq-accordion__item-content-btn {
+    margin-left: 0;
+  }
+}
 
 .section-get-started {
   position: relative;

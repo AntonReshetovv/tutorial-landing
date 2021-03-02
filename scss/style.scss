@@ -15,6 +15,16 @@
 
 // === / Mixins ===
 
+//  === Function ===
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+  @return (strip-unit($num) / 16) * 1rem;
+}
+//  === / Function ===
+
 // === Variables ===
 
 $breakpoint-sm-min: 576px;
@@ -28,19 +38,19 @@ $breakpoint-lg-max: $breakpoint-xl-min - 1;
 $breakpoint-xxl-min: 1400px;
 $breakpoint-xl-max: $breakpoint-xxl-min - 1;
 
-$base: 4px;
+$base: rem(4px);
 
 $padding-vertical-xs: $base * 5;
 $padding-vertical-sm: $base * 15;
 $padding-vertical: $base * 30;
 
-$fs-xxs: 10px;
-$fs-xs: 12px;
-$fs-s: 15px;
-$fs-m: 18px;
-$fs-l: 24px;
-$fs-xl: 36px;
-$fs-xxl: 48px;
+$fs-xxs: rem(10px);
+$fs-xs: rem(12px);
+$fs-s: rem(15px);
+$fs-m: rem(18px);
+$fs-l: rem(24px);
+$fs-xl: rem(36px);
+$fs-xxl: rem(48px);
 
 $fw-light: 300;
 $fw-regular: 400;
@@ -87,6 +97,17 @@ $transition: 0.2s;
 // === / Variables ===
 
 // === Common ===
+// html {
+//   @media (max-width: $breakpoint-md-max) {
+//     font-size: 14px;
+//   }
+
+//   @media (max-width: $breakpoint-sm-max) {
+//     font-size: 10px;
+//   }
+// }
+
+
 body {
   @include roboto();
   color: $color-gray-500;
@@ -492,6 +513,7 @@ h3 {
       .text {
         max-width: 60%;
         margin: 0 auto $base * 5;
+        font-size: $fs-s;
         line-height: 2;
       }
     }
@@ -548,7 +570,7 @@ h3 {
   overflow: hidden;
 
   &__content {
-    width: 50%;
+    width: 60%;
 
     &-image {
       position: absolute;
@@ -568,6 +590,7 @@ h3 {
 
     .text {
       margin-bottom: $base * 12;
+      font-size: $fs-s;
       line-height: 2;
     }
 
@@ -575,6 +598,10 @@ h3 {
       svg {
         margin-left: $base;
       }
+    }
+
+    @media (min-width: $breakpoint-lg-max) {
+      width: 50%;
     }
   }
 }
@@ -710,10 +737,13 @@ h3 {
     &-text {
       @include quicksand();
       text-align: right;
-      width: 50%;
       font-size: $fs-m;
       font-weight: $fw-medium;
       line-height: 2;
+
+      @media (min-width: $breakpoint-lg-min) {
+        width: 50%;
+      }
     }
   }
 
@@ -735,10 +765,13 @@ h3 {
 
     &-text {
       @include quicksand();
-      width: 50%;
       font-size: $fs-m;
       font-weight: $fw-medium;
       line-height: 2;
+
+      @media (min-width: $breakpoint-lg-min) {
+        width: 50%;
+      }
     }
   }
 }

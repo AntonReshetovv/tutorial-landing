@@ -454,6 +454,14 @@ h3 {
     width: 50%;
   }
 }
+@media (max-width: 575px) {
+  .section-plan-and-manage__content {
+    width: 70%;
+  }
+  .section-plan-and-manage__content-image {
+    left: 40%;
+  }
+}
 
 .section-features {
   background: url("../img/features-clouds.svg") no-repeat 50% 50%;

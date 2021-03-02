@@ -631,6 +631,14 @@ h3 {
     @media (min-width: $breakpoint-lg-max) {
       width: 50%;
     }
+
+    @media (max-width: $breakpoint-xs-max) {
+      width: 70%;
+
+      &-image {
+        left: 40%;
+      }
+    }
   }
 }
 // === / Plan-and-manage ===

@@ -804,23 +804,23 @@ h3 {
     justify-content: space-between;
     padding: $base * 16 $base * 8;
 
-    &-gallery,
-    &-content {
-      flex-basis: 45%;
-    }
-
     &-gallery {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: $base * 3;
-      grid-row-gap: $base * 3;
+      grid-template-rows: repeat(2, $base * 30);
+      grid-template-columns: repeat(3, $base * 30);
+      grid-gap: $base * 4;
+
+      @media (max-width: $breakpoint-md-max) {
+        grid-template-rows: repeat(2, $base * 25);
+        grid-template-columns: repeat(3, $base * 25);
+        grid-gap: $base * 2;
+      }
 
       .image-link {
         display: block;
         position: relative;
         overflow: hidden;
-        box-shadow: 0px $base * 4 $base * 25 $color-blue-200;
+        // box-shadow: 0px $base * 4 $base * 25 $color-blue-200;
         background-color: $color-white-900;
         border-radius: $base;
 
@@ -859,7 +859,8 @@ h3 {
         }
 
         &--big {
-          grid-area: 1 / 1 / 3 / 2;
+          grid-row: 1 / 3;
+          grid-column: 1 / 3;
 
           &::before {
             background: linear-gradient(transparent, #ffc735);
@@ -867,7 +868,8 @@ h3 {
         }
 
         &--sm-1 {
-          grid-area: 1 / 2 / 2 / 3;
+          grid-row: 1 / 2;
+          grid-column: 3 / 3;
 
           &::before {
             background: linear-gradient(transparent, rgba(255, 53, 53, 0.48));
@@ -875,7 +877,8 @@ h3 {
         }
 
         &--sm-2 {
-          grid-area: 2 / 2 / 3 / 3;
+          grid-row: 2 / 2;
+          grid-column: 3 / 3;
 
           &::before {
             background: linear-gradient(transparent, rgba(53, 170, 255, 0.68));
@@ -885,6 +888,8 @@ h3 {
     }
 
     &-content {
+      flex-grow: 1;
+      margin-left: $base * 5;
       h3 {
         margin-bottom: $base * 8;
       }

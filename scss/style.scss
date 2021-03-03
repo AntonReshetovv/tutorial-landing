@@ -1,3 +1,5 @@
+@import url('../css/normalize.css');
+
 // === Mixins ===
 @mixin roboto() {
   font-family: "Roboto", sans-serif;
@@ -200,6 +202,11 @@ h3 {
   &--size-lg {
     padding: $base * 5 $base * 15;
     border-radius: $base;
+
+    @media (max-width: $breakpoint-sm-max) {
+      padding-left: $base * 5;
+      padding-right: $base * 5;
+    }
   }
 
   &--primary {
@@ -368,7 +375,7 @@ h3 {
 
     .section-header & {
       @media (max-width: $breakpoint-md-max) {
-        // display: none;
+        display: none;
         margin-left: 0;
         padding: 0 $base;
         position: absolute;
@@ -1077,7 +1084,7 @@ h3 {
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint-xs-max) {
+    @media (max-width: $breakpoint-sm-max) {
       flex-direction: column;
     }
   }
